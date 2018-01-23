@@ -2,8 +2,8 @@
  * Compile实现原理
  */
 function Compile (el, value) {
-  this.$val = value;
-  this.$el = this.isElementNode(el) ? el : document.querySelector(el);
+  this.$val = value;  // 数据对象
+  this.$el = this.isElementNode(el) ? el : document.querySelector(el);  // 获取容器
   if (this.$el) {
     this.compileElement(this.$el);
   }
